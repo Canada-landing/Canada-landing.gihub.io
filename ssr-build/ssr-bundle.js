@@ -3299,7 +3299,7 @@ var CDHeader = function CDHeader() {
   }, h("div", {
     class: _style_css__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"].cdheaderContent
   }, h(preact_router_match__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/homeversion"
+    href: "/homeversion"
   }, h("img", {
     src: _assets_header_cdlogo_svg__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"],
     alt: "logo",
@@ -19571,7 +19571,7 @@ var Form = function Form(_ref) {
     handleSelectChange: handleSelectChange,
     onBlur: handleSelectBlur,
     errors: errors
-  }), console.log("Values-->", values.check), h("button", {
+  }), h("button", {
     type: "submit",
     disabled: loading || !values.check
   }, "Check Your Eligibility \xA0", " ", loading && h("img", {
