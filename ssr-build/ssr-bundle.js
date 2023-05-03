@@ -3299,7 +3299,7 @@ var CDHeader = function CDHeader() {
   }, h("div", {
     class: _style_css__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"].cdheaderContent
   }, h(preact_router_match__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    href: "/home"
+    href: "/homeversion"
   }, h("img", {
     src: _assets_header_cdlogo_svg__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"],
     alt: "logo",
