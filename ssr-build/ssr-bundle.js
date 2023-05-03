@@ -3299,7 +3299,7 @@ var CDHeader = function CDHeader() {
   }, h("div", {
     class: _style_css__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"].cdheaderContent
   }, h(preact_router_match__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    href: "/homeversion"
+    to: "/homeversion"
   }, h("img", {
     src: _assets_header_cdlogo_svg__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"],
     alt: "logo",
@@ -4601,6 +4601,8 @@ exports["default"] = _default;
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("XruS");
 
 
+
+// import CDStyleButton from "./styleButton";
 
 var CDBanner = function CDBanner() {
   return h("div", {
@@ -13621,7 +13623,7 @@ module.exports = _setPrototypeOf, module.exports.__esModule = true, module.expor
 
 "use strict";
 // extracted by mini-css-extract-plugin
-/* harmony default export */ __webpack_exports__["a"] = ({"bannerContent":"bannerContent__R1RK+","bannerContainer":"bannerContainer__Y14FG","bannerContentContainer":"bannerContentContainer__Pb9Qi","bannerContentLeft":"bannerContentLeft__jZb3o","bannerContentRight":"bannerContentRight__ec8GF","bannerVersionContent":"bannerVersionContent__5xPgq","bannerContentversion":"bannerContentversion__SXMMf","serviceContent":"serviceContent__-zR3K","serviceContentContainer":"serviceContentContainer__Nqz7C","serviceContentLeft":"serviceContentLeft__sxMxO","serviceContentRight":"serviceContentRight__SKolg","serviceContentBox":"serviceContentBox__lpEgf","serviceContentBoxItem":"serviceContentBoxItem__TVnOz","formContent":"formContent__xYukN","formContainer":"formContainer__tWtHm","formBg":"formBg__vpAPv","formBgversion":"formBgversion__a4E7u","formContents":"formContents__hYofZ","formText":"formText__W4YBy","formMainContent":"formMainContent__3styu","formFieldGrid":"formFieldGrid__l+43J","formFieldTel":"formFieldTel__uSrsn","react-select__indicator-separator":"react-select__indicator-separator__7ZtCB","react-select__indicator":"react-select__indicator__MbE9N","react-select__dropdown-indicator":"react-select__dropdown-indicator__d9-eS","reviewSliderMainContent":"reviewSliderMainContent__oosR-","reviewSlider":"reviewSlider__e1dRT","reviewSliderContainer":"reviewSliderContainer__C2sbU","reviewSliderContent":"reviewSliderContent__aaOXO","reviewSlide":"reviewSlide__bXf5R","reviewSlideHead":"reviewSlideHead__BrUwb","reviewProfile":"reviewProfile__hb9p5","reviewProfileTop":"reviewProfileTop__BDhUr","reviewProfileDesc":"reviewProfileDesc__VT9DX","reviewStars":"reviewStars__mS1F3","reviewHead":"reviewHead__ZY02I","reviewSliderBtn":"reviewSliderBtn__RgD2N","formField":"formField__rhfee","errorMsg":"errorMsg__87rSn"});
+/* harmony default export */ __webpack_exports__["a"] = ({"bannerContent":"bannerContent__R1RK+","bannerContainer":"bannerContainer__Y14FG","bannerContentContainer":"bannerContentContainer__Pb9Qi","bannerContentLeft":"bannerContentLeft__jZb3o","bannerContentRight":"bannerContentRight__ec8GF","bannerVersionContent":"bannerVersionContent__5xPgq","bannerContentversion":"bannerContentversion__SXMMf","serviceContent":"serviceContent__-zR3K","serviceContentContainer":"serviceContentContainer__Nqz7C","serviceContentLeft":"serviceContentLeft__sxMxO","serviceContentRight":"serviceContentRight__SKolg","serviceContentBox":"serviceContentBox__lpEgf","serviceContentBoxItem":"serviceContentBoxItem__TVnOz","formContent":"formContent__xYukN","formContainer":"formContainer__tWtHm","formBg":"formBg__vpAPv","formBgversion":"formBgversion__a4E7u","formContents":"formContents__hYofZ","formText":"formText__W4YBy","formMainContent":"formMainContent__3styu","formFieldGrid":"formFieldGrid__l+43J","formFieldTel":"formFieldTel__uSrsn","react-select__indicator-separator":"react-select__indicator-separator__7ZtCB","react-select__indicator":"react-select__indicator__MbE9N","react-select__dropdown-indicator":"react-select__dropdown-indicator__d9-eS","reviewSliderMainContent":"reviewSliderMainContent__oosR-","reviewSlider":"reviewSlider__e1dRT","reviewSliderContainer":"reviewSliderContainer__C2sbU","reviewSliderContent":"reviewSliderContent__aaOXO","reviewSlide":"reviewSlide__bXf5R","reviewSlideHead":"reviewSlideHead__BrUwb","reviewProfile":"reviewProfile__hb9p5","reviewProfileTop":"reviewProfileTop__BDhUr","reviewProfileDesc":"reviewProfileDesc__VT9DX","reviewStars":"reviewStars__mS1F3","reviewHead":"reviewHead__ZY02I","reviewSliderBtn":"reviewSliderBtn__RgD2N","formField":"formField__rhfee","errorMsg":"errorMsg__87rSn","cd-button":"cd-button__HKJk7","cdButton":"cdButton__KjBpM"});
 
 /***/ }),
 
