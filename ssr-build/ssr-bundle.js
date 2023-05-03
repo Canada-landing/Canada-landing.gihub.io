@@ -3284,7 +3284,7 @@ var scrollToWhy = function scrollToWhy() {
 // eslint-disable-next-line react-hooks/rules-of-hooks
 
 var CDHeader = function CDHeader() {
-  var thankyouUrl = window.location.pathname === '/thankyou';
+  var thankyouUrl = typeof window !== "undefined" && window.location.pathname === '/thankyou';
   var _useState = Object(preact_hooks__WEBPACK_IMPORTED_MODULE_0__[/* useState */ "l"])(false),
     _useState2 = _slicedToArray(_useState, 2),
     isActive = _useState2[0],
@@ -4933,12 +4933,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  if (typeof window !== "undefined") {
-    var location = window.location.pathname;
-    if (location === "/") {
-      window.location.href = "/lp/en/global/immigration/check/";
-    }
-  }
+  // if (typeof window !== "undefined") {
+  //   const location = window.location.pathname;
+  //   if (location === "/") {
+  //     window.location.href = "/lp/en/global/immigration/check/";
+  //   }
+  // }
   return h("div", {
     id: "app"
   }, h("main", null, h(preact_router__WEBPACK_IMPORTED_MODULE_0__["Router"], {
@@ -4952,7 +4952,7 @@ var App = function App() {
   }), h(_routes_result_result__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"], {
     path: "/result/"
   }), h(_routes_cd_home__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"], {
-    path: "/home/"
+    path: "/"
   }), h(_routes_cd_home_homeversion__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"], {
     path: "/homeversion/"
   }), h(_components_canada_district_thank_you__WEBPACK_IMPORTED_MODULE_8__[/* default */ "a"], {
@@ -19266,55 +19266,55 @@ var CDForm = function CDForm() {
   var customStyles = {
     option: function option(provided) {
       return _objectSpread(_objectSpread({}, provided), {}, {
-        background: '#fff',
-        color: '#333',
-        fontWeight: '500',
-        fontSize: '16px',
-        padding: '4px 10px',
-        lineHeight: '24px',
-        cursor: 'pointer',
-        ':hover': {
-          background: '#F1EEFB',
+        background: "#fff",
+        color: "#333",
+        fontWeight: "500",
+        fontSize: "16px",
+        padding: "4px 10px",
+        lineHeight: "24px",
+        cursor: "pointer",
+        ":hover": {
+          background: "#F1EEFB",
           borderRadius: 8
         }
       });
     },
     menu: function menu(provided) {
       return _objectSpread(_objectSpread({}, provided), {}, {
-        background: '#ffffff',
-        padding: '15px'
+        background: "#ffffff",
+        padding: "15px"
       });
     },
     control: function control() {
       return {
-        background: '#ffffff',
-        border: '2px solid #CED0D0',
-        borderRadius: '6px',
-        padding: '0px 10px',
-        color: '#333333',
-        display: 'flex',
-        alignItem: 'center',
-        height: '40px',
-        fontWeight: '500',
-        fontSize: '16px',
-        lineHeight: '24px'
+        background: "#ffffff",
+        border: "2px solid #CED0D0",
+        borderRadius: "6px",
+        padding: "0px 10px",
+        color: "#333333",
+        display: "flex",
+        alignItem: "center",
+        height: "40px",
+        fontWeight: "500",
+        fontSize: "16px",
+        lineHeight: "24px"
       };
     },
     singleValue: function singleValue(provided) {
       return _objectSpread(_objectSpread({}, provided), {}, {
-        color: '#333',
-        fontWeight: '500',
-        fontSize: '16px',
-        lineHeight: '24px'
+        color: "#333",
+        fontWeight: "500",
+        fontSize: "16px",
+        lineHeight: "24px"
       });
     },
     errorStyle: function errorStyle(provided) {
       return _objectSpread(_objectSpread({}, provided), {}, {
-        border: '2px solid red'
+        border: "2px solid red"
       });
     }
   };
-  var checkUrl = window.location.pathname === '/homeversion';
+  var checkUrl = typeof window !== "undefined" && window.location.pathname === "/homeversion";
   return h("div", {
     class: _style_css__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"].formContent
   }, h("div", {
@@ -19335,14 +19335,14 @@ var CDForm = function CDForm() {
 var Form = function Form(_ref) {
   var customStyles = _ref.customStyles;
   var _useState = Object(preact_hooks__WEBPACK_IMPORTED_MODULE_3__[/* useState */ "l"])({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phoneNumber: '',
-      age: '',
-      income: '',
-      engLevel: '',
-      country: '',
+      firstName: "",
+      lastName: "",
+      email: "",
+      phoneNumber: "",
+      age: "",
+      income: "",
+      engLevel: "",
+      country: "",
       check: true
     }),
     _useState2 = _slicedToArray(_useState, 2),
@@ -19368,11 +19368,11 @@ var Form = function Form(_ref) {
     var _e$target = e.target,
       name = _e$target.name,
       value = _e$target.value;
-    if (name === 'check') {
+    if (name === "check") {
       return setValues(_objectSpread(_objectSpread({}, values), {}, _defineProperty({}, name, e.target.checked)));
     }
     setValues(_objectSpread(_objectSpread({}, values), {}, _defineProperty({}, name, value)));
-    setErrors(_objectSpread(_objectSpread({}, errors), {}, _defineProperty({}, name, '')));
+    setErrors(_objectSpread(_objectSpread({}, errors), {}, _defineProperty({}, name, "")));
   };
   var checkEmail = /^[A-Za-z0-9.]{2,}@[A-Za-z0-9]{3,}[.]{1}[A-Za-z]{2,10}$/;
   var handleOnblur = /*#__PURE__*/function () {
@@ -19381,12 +19381,12 @@ var Form = function Form(_ref) {
         name = _e$target2.name,
         value = _e$target2.value,
         placeholder = _e$target2.placeholder;
-      if (value === '') {
+      if (value === "") {
         setErrors(_objectSpread(_objectSpread({}, errors), {}, _defineProperty({}, name, "".concat(placeholder, " is required"))));
-      } else if (name === 'email' && !checkEmail.test(value)) {
+      } else if (name === "email" && !checkEmail.test(value)) {
         setErrors(_objectSpread(_objectSpread({}, errors), {}, _defineProperty({}, name, "Email not valid")));
       } else {
-        setErrors(_objectSpread(_objectSpread({}, errors), {}, _defineProperty({}, name, '')));
+        setErrors(_objectSpread(_objectSpread({}, errors), {}, _defineProperty({}, name, "")));
       }
     });
     return function handleOnblur(_x2) {
@@ -19394,10 +19394,10 @@ var Form = function Form(_ref) {
     };
   }();
   var handleSelectBlur = function handleSelectBlur(val, name, erName) {
-    if (values[name] === '') {
+    if (values[name] === "") {
       setErrors(_defineProperty({}, name, "".concat(erName, " is required")));
-    } else if (val.value !== '') {
-      setErrors(_defineProperty({}, name, ''));
+    } else if (val.value !== "") {
+      setErrors(_defineProperty({}, name, ""));
     }
   };
   var handleSelectChange = function handleSelectChange(val, name) {
@@ -19407,7 +19407,7 @@ var Form = function Form(_ref) {
     var _ref3 = _asyncToGenerator(function* () {
       var countryDetail = [];
       try {
-        var res = yield fetch('https://restcountries.com/v2/all');
+        var res = yield fetch("https://restcountries.com/v2/all");
         var jsonData = yield res.json();
         if ((jsonData === null || jsonData === void 0 ? void 0 : jsonData.length) > 0) {
           jsonData === null || jsonData === void 0 ? void 0 : jsonData.forEach(function (el) {
@@ -19420,7 +19420,7 @@ var Form = function Form(_ref) {
         }
       } catch (err) {
         var _err$response, _err$response$data, _err$response2, _err$response2$data;
-        setShowMessage((err === null || err === void 0 ? void 0 : (_err$response = err.response) === null || _err$response === void 0 ? void 0 : (_err$response$data = _err$response.data) === null || _err$response$data === void 0 ? void 0 : _err$response$data.msg) || (err === null || err === void 0 ? void 0 : (_err$response2 = err.response) === null || _err$response2 === void 0 ? void 0 : (_err$response2$data = _err$response2.data) === null || _err$response2$data === void 0 ? void 0 : _err$response2$data.message) || 'Something went wrong');
+        setShowMessage((err === null || err === void 0 ? void 0 : (_err$response = err.response) === null || _err$response === void 0 ? void 0 : (_err$response$data = _err$response.data) === null || _err$response$data === void 0 ? void 0 : _err$response$data.msg) || (err === null || err === void 0 ? void 0 : (_err$response2 = err.response) === null || _err$response2 === void 0 ? void 0 : (_err$response2$data = _err$response2.data) === null || _err$response2$data === void 0 ? void 0 : _err$response2$data.message) || "Something went wrong");
       }
     });
     return function getCountries() {
@@ -19434,33 +19434,33 @@ var Form = function Form(_ref) {
     var _ref4 = _asyncToGenerator(function* (e) {
       e.preventDefault();
       try {
-        if (values.firstName === '') {
+        if (values.firstName === "") {
           return setErrors(_objectSpread(_objectSpread({}, errors), {}, {
-            firstName: 'First Name is required'
+            firstName: "First Name is required"
           }));
-        } else if (values.lastName === '') {
+        } else if (values.lastName === "") {
           return setErrors(_objectSpread(_objectSpread({}, errors), {}, {
-            lastName: 'Last Name is required'
+            lastName: "Last Name is required"
           }));
-        } else if (values.email === '') {
+        } else if (values.email === "") {
           return setErrors(_objectSpread(_objectSpread({}, errors), {}, {
-            email: 'Email is required'
+            email: "Email is required"
           }));
-        } else if (values.phoneNumber === '') {
+        } else if (values.phoneNumber === "") {
           return setErrors(_objectSpread(_objectSpread({}, errors), {}, {
-            phoneNumber: 'Phone number is required'
+            phoneNumber: "Phone number is required"
           }));
-        } else if (values.age === '') {
+        } else if (values.age === "") {
           return setErrors(_objectSpread(_objectSpread({}, errors), {}, {
-            age: 'Age is required'
+            age: "Age is required"
           }));
-        } else if (values.income === '') {
+        } else if (values.income === "") {
           return setErrors(_objectSpread(_objectSpread({}, errors), {}, {
-            income: 'Income is required'
+            income: "Income is required"
           }));
-        } else if (values.engLevel === '') {
+        } else if (values.engLevel === "") {
           return setErrors(_objectSpread(_objectSpread({}, errors), {}, {
-            engLevel: 'English level is required'
+            engLevel: "English level is required"
           }));
         }
         setLoading(true);
@@ -19475,22 +19475,22 @@ var Form = function Form(_ref) {
           Passport_Holder_score__c: values.country
         };
         var response = yield fetch("https://service.uiscanada.com/forms/consult", {
-          method: 'POST',
+          method: "POST",
           // *GET, POST, PUT, DELETE, etc.
           headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json"
           },
           body: JSON.stringify(payload)
         });
         var status = response.status;
         if (status === 200) {
           setLoading(false);
-          Object(preact_router__WEBPACK_IMPORTED_MODULE_2__["route"])('/thankyou/');
+          Object(preact_router__WEBPACK_IMPORTED_MODULE_2__["route"])("/thankyou/");
         }
       } catch (err) {
         var _err$response3, _err$response3$data, _err$response4, _err$response4$data;
         setLoading(false);
-        setShowMessage((err === null || err === void 0 ? void 0 : (_err$response3 = err.response) === null || _err$response3 === void 0 ? void 0 : (_err$response3$data = _err$response3.data) === null || _err$response3$data === void 0 ? void 0 : _err$response3$data.msg) || (err === null || err === void 0 ? void 0 : (_err$response4 = err.response) === null || _err$response4 === void 0 ? void 0 : (_err$response4$data = _err$response4.data) === null || _err$response4$data === void 0 ? void 0 : _err$response4$data.message) || 'Something went wrong');
+        setShowMessage((err === null || err === void 0 ? void 0 : (_err$response3 = err.response) === null || _err$response3 === void 0 ? void 0 : (_err$response3$data = _err$response3.data) === null || _err$response3$data === void 0 ? void 0 : _err$response3$data.msg) || (err === null || err === void 0 ? void 0 : (_err$response4 = err.response) === null || _err$response4 === void 0 ? void 0 : (_err$response4$data = _err$response4.data) === null || _err$response4$data === void 0 ? void 0 : _err$response4$data.message) || "Something went wrong");
       }
     });
     return function handleSubmit(_x3) {
@@ -19498,7 +19498,7 @@ var Form = function Form(_ref) {
     };
   }();
   var closeAction = function closeAction() {
-    setShowMessage('');
+    setShowMessage("");
   };
   return h("div", {
     class: _style_css__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"].formMainContent,
@@ -19530,10 +19530,10 @@ var Form = function Form(_ref) {
     onChange: handleChange,
     onBlur: handleOnblur
   }), (errors === null || errors === void 0 ? void 0 : errors.email) && h("span", null, errors === null || errors === void 0 ? void 0 : errors.email), h(react_phone_input_2__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    country: 'de',
+    country: "de",
     value: values === null || values === void 0 ? void 0 : values.phone,
     inputProps: {
-      name: 'phoneNumber',
+      name: "phoneNumber",
       required: true,
       autoFocus: false,
       className: "".concat(_style_css__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"].formField, " ").concat(_style_css__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"].formFieldTel, " ").concat(errors !== null && errors !== void 0 && errors.phoneNumber ? _style_css__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"].errorMsg : "")
@@ -19541,7 +19541,7 @@ var Form = function Form(_ref) {
     onChange: function onChange(e) {
       return handleChange({
         target: {
-          name: 'phoneNumber',
+          name: "phoneNumber",
           value: "+".concat(e)
         }
       });
@@ -19570,7 +19570,7 @@ var Form = function Form(_ref) {
   }), console.log("Values-->", values.check), h("button", {
     type: "submit",
     disabled: loading || !values.check
-  }, "Check Your Eligibility \xA0", ' ', loading && h("img", {
+  }, "Check Your Eligibility \xA0", " ", loading && h("img", {
     src: _assets_header_loader_gif__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"],
     alt: "",
     className: "loader-icon"
@@ -19586,11 +19586,11 @@ var Form = function Form(_ref) {
     href: "https://canadadistrict.com/termconditions",
     target: "_blank",
     rel: "noreferrer"
-  }, "T&C"), ' ', "and", ' ', h("a", {
+  }, "T&C"), " ", "and", " ", h("a", {
     href: "https://canadadistrict.com/privacypolicy",
     target: "_blank",
     rel: "noreferrer"
-  }, "Privacy Policy"), ".")))), message !== '' && message ? h(_alert_errorMessage__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"], {
+  }, "Privacy Policy"), ".")))), message !== "" && message ? h(_alert_errorMessage__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"], {
     message: message,
     closeAction: closeAction
   }) : null);
@@ -19601,32 +19601,32 @@ var SelectAge = function SelectAge(_ref5) {
     _onBlur = _ref5.onBlur,
     errors = _ref5.errors;
   var options = [{
-    value: '18-20',
-    label: '18-20'
+    value: "18-20",
+    label: "18-20"
   }, {
-    value: '21-25',
-    label: '21-25'
+    value: "21-25",
+    label: "21-25"
   }, {
-    value: '26-30',
-    label: '26-30'
+    value: "26-30",
+    label: "26-30"
   }, {
-    value: '31-35',
-    label: '31-35'
+    value: "31-35",
+    label: "31-35"
   }, {
-    value: '36-39',
-    label: '36-39'
+    value: "36-39",
+    label: "36-39"
   }, {
-    value: '40-49',
-    label: '40-49'
+    value: "40-49",
+    label: "40-49"
   }, {
-    value: '50-59',
-    label: '50-59'
+    value: "50-59",
+    label: "50-59"
   }, {
-    value: '60-69',
-    label: '60-69'
+    value: "60-69",
+    label: "60-69"
   }, {
-    value: '70+',
-    label: '70+'
+    value: "70+",
+    label: "70+"
   }];
   return h("div", {
     class: _style_css__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"].formSelectContent
@@ -19635,11 +19635,12 @@ var SelectAge = function SelectAge(_ref5) {
     placeholder: "Your age",
     styles: customStyles,
     onChange: function onChange(e) {
-      return handleSelectChange(e, 'age');
+      return handleSelectChange(e, "age");
     },
     onBlur: function onBlur(e) {
-      return _onBlur(e, 'age', 'Age');
-    }
+      return _onBlur(e, "age", "Age");
+    },
+    classNamePrefix: "react-select"
   }), (errors === null || errors === void 0 ? void 0 : errors.age) && h("span", null, errors === null || errors === void 0 ? void 0 : errors.age));
 };
 var SelectIncome = function SelectIncome(_ref6) {
@@ -19648,20 +19649,20 @@ var SelectIncome = function SelectIncome(_ref6) {
     _onBlur2 = _ref6.onBlur,
     errors = _ref6.errors;
   var options = [{
-    value: '0-1500',
-    label: '0-1500'
+    value: "0-1500",
+    label: "0-1500"
   }, {
-    value: '1500-3000',
-    label: '1500-3000'
+    value: "1500-3000",
+    label: "1500-3000"
   }, {
-    value: '3000-5000',
-    label: '3000-5000'
+    value: "3000-5000",
+    label: "3000-5000"
   }, {
-    value: '5000-10000',
-    label: '5000-10000'
+    value: "5000-10000",
+    label: "5000-10000"
   }, {
-    value: '10000+',
-    label: '10000+'
+    value: "10000+",
+    label: "10000+"
   }];
   return h("div", {
     class: _style_css__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"].formSelectContent
@@ -19670,11 +19671,12 @@ var SelectIncome = function SelectIncome(_ref6) {
     placeholder: "Your Monthly income ($)",
     styles: customStyles,
     onChange: function onChange(e) {
-      return handleSelectChange(e, 'income');
+      return handleSelectChange(e, "income");
     },
     onBlur: function onBlur(e) {
-      return _onBlur2(e, 'income', 'Income');
-    }
+      return _onBlur2(e, "income", "Income");
+    },
+    classNamePrefix: "react-select"
   }), (errors === null || errors === void 0 ? void 0 : errors.income) && h("span", null, errors === null || errors === void 0 ? void 0 : errors.income));
 };
 var SelectLevel = function SelectLevel(_ref7) {
@@ -19683,23 +19685,23 @@ var SelectLevel = function SelectLevel(_ref7) {
     _onBlur3 = _ref7.onBlur,
     errors = _ref7.errors;
   var options = [{
-    value: 'Fluent',
-    label: 'Fluent'
+    value: "Fluent",
+    label: "Fluent"
   }, {
-    value: 'Very high',
-    label: 'Very high'
+    value: "Very high",
+    label: "Very high"
   }, {
-    value: 'High',
-    label: 'High'
+    value: "High",
+    label: "High"
   }, {
-    value: 'Basic',
-    label: 'Basic'
+    value: "Basic",
+    label: "Basic"
   }, {
-    value: 'Low',
-    label: 'Low'
+    value: "Low",
+    label: "Low"
   }, {
-    value: 'Not at all',
-    label: 'Not at all'
+    value: "Not at all",
+    label: "Not at all"
   }];
   return h("div", {
     class: _style_css__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"].formSelectContent
@@ -19708,11 +19710,12 @@ var SelectLevel = function SelectLevel(_ref7) {
     placeholder: "English level",
     styles: customStyles,
     onChange: function onChange(e) {
-      return handleSelectChange(e, 'engLevel');
+      return handleSelectChange(e, "engLevel");
     },
     onBlur: function onBlur(e) {
-      return _onBlur3(e, 'engLevel', 'English level');
-    }
+      return _onBlur3(e, "engLevel", "English level");
+    },
+    classNamePrefix: "react-select"
   }), (errors === null || errors === void 0 ? void 0 : errors.engLevel) && h("span", null, errors === null || errors === void 0 ? void 0 : errors.engLevel));
 };
 var SelectCountry = function SelectCountry(_ref8) {
@@ -19737,11 +19740,12 @@ var SelectCountry = function SelectCountry(_ref8) {
     placeholder: "Select Country",
     styles: customStyles,
     onChange: function onChange(e) {
-      return handleSelectChange(e, 'country');
+      return handleSelectChange(e, "country");
     },
     onBlur: function onBlur(e) {
-      return _onBlur4(e, 'country', 'Country');
-    }
+      return _onBlur4(e, "country", "Country");
+    },
+    classNamePrefix: "react-select"
   }), (errors === null || errors === void 0 ? void 0 : errors.country) && h("span", null, errors === null || errors === void 0 ? void 0 : errors.country));
 };
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("HteQ")["h"]))
