@@ -19397,7 +19397,7 @@ var Form = function Form(_ref) {
   }();
   var handleSelectBlur = function handleSelectBlur(val, name, erName) {
     if (values[name] === "") {
-      setErrors(_defineProperty({}, name, "".concat(erName, " is required")));
+      setErrors(_objectSpread(_objectSpread({}, errors), {}, _defineProperty({}, name, "".concat(erName, " is required"))));
     } else if (val.value !== "") {
       setErrors(_defineProperty({}, name, ""));
     }
@@ -19518,6 +19518,7 @@ var Form = function Form(_ref) {
     onChange: handleChange,
     onBlur: handleOnblur
   }), (errors === null || errors === void 0 ? void 0 : errors.firstName) && h("span", null, errors === null || errors === void 0 ? void 0 : errors.firstName), h("input", {
+    class: "".concat(_style_css__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"].formField, " ").concat(errors !== null && errors !== void 0 && errors.lastName ? _style_css__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"].errorMsg : ""),
     type: "text",
     name: "lastName",
     value: values === null || values === void 0 ? void 0 : values.lastName,
@@ -19525,6 +19526,7 @@ var Form = function Form(_ref) {
     onChange: handleChange,
     onBlur: handleOnblur
   }), (errors === null || errors === void 0 ? void 0 : errors.lastName) && h("span", null, errors === null || errors === void 0 ? void 0 : errors.lastName), h("input", {
+    class: "".concat(_style_css__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"].formField, " ").concat(errors !== null && errors !== void 0 && errors.email ? _style_css__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"].errorMsg : ""),
     type: "text",
     name: "email",
     value: values === null || values === void 0 ? void 0 : values.email,
@@ -19642,7 +19644,8 @@ var SelectAge = function SelectAge(_ref5) {
     onBlur: function onBlur(e) {
       return _onBlur(e, "age", "Age");
     },
-    classNamePrefix: "react-select"
+    classNamePrefix: "react-select",
+    className: "react-select-container ".concat(errors !== null && errors !== void 0 && errors.age ? "error-msg" : "")
   }), (errors === null || errors === void 0 ? void 0 : errors.age) && h("span", null, errors === null || errors === void 0 ? void 0 : errors.age));
 };
 var SelectIncome = function SelectIncome(_ref6) {
@@ -19678,7 +19681,8 @@ var SelectIncome = function SelectIncome(_ref6) {
     onBlur: function onBlur(e) {
       return _onBlur2(e, "income", "Income");
     },
-    classNamePrefix: "react-select"
+    classNamePrefix: "react-select",
+    className: "react-select-container ".concat(errors !== null && errors !== void 0 && errors.income ? "error-msg" : "")
   }), (errors === null || errors === void 0 ? void 0 : errors.income) && h("span", null, errors === null || errors === void 0 ? void 0 : errors.income));
 };
 var SelectLevel = function SelectLevel(_ref7) {
@@ -19717,7 +19721,8 @@ var SelectLevel = function SelectLevel(_ref7) {
     onBlur: function onBlur(e) {
       return _onBlur3(e, "engLevel", "English level");
     },
-    classNamePrefix: "react-select"
+    classNamePrefix: "react-select",
+    className: "react-select-container ".concat(errors !== null && errors !== void 0 && errors.engLevel ? "error-msg" : "")
   }), (errors === null || errors === void 0 ? void 0 : errors.engLevel) && h("span", null, errors === null || errors === void 0 ? void 0 : errors.engLevel));
 };
 var SelectCountry = function SelectCountry(_ref8) {
@@ -19747,7 +19752,8 @@ var SelectCountry = function SelectCountry(_ref8) {
     onBlur: function onBlur(e) {
       return _onBlur4(e, "country", "Country");
     },
-    classNamePrefix: "react-select"
+    classNamePrefix: "react-select",
+    className: "react-select-container ".concat(errors !== null && errors !== void 0 && errors.country ? "error-msg" : "")
   }), (errors === null || errors === void 0 ? void 0 : errors.country) && h("span", null, errors === null || errors === void 0 ? void 0 : errors.country));
 };
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("HteQ")["h"]))
